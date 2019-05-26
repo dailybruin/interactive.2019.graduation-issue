@@ -1,0 +1,25 @@
+{
+    "name": "interactive.2019.graduation-issue",
+    "scripts": {
+        "start": "cross-env NODE_ENV=development parcel src/index.html",
+        "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url /2019/graduation-issue",
+        "build:netlify": "cross-env NODE_ENV=production parcel build src/index.html --public-url /",
+        "precommit": "lint-staged"
+    },
+    "dependencies": {
+        "@babel/preset-react": "^7.0.0",
+        "parcel": "^1.12.3",
+        "parcel-bundler": "^1.12.3",
+        "prettier": "^1.17.1",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "cross-env": "^5.2.0",
+        "husky": "^2.3.0",
+        "lint-staged": "^8.1.7",
+        "node-sass": "^4.12.0"
+    },
+    "license": "ITC"
+}
