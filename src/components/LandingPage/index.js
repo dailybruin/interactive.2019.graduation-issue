@@ -11,6 +11,14 @@ export class LandingPage extends React.Component {
                     width: 100%;
                     height: 100%;
 
+                    top: 0;
+                    animation-name: fade-out;
+                    animation-delay: 2s;
+                    animation-duration: 800ms;
+                    animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                    animation-fill-mode: forwards;
+                    will-change: opacity;
+
                     // TODO: Replace image with PhotoIllo
                     background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/8e/Royce_Hall%2C_University_of_California%2C_Los_Angeles_%2823-09-2003%29.jpg);
 

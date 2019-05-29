@@ -2,16 +2,6 @@ body {
     margin: 0;
 }
 
-#LandingPage {
-    top: 0;
-    animation-name: fade-out;
-    animation-delay: 2s;
-    animation-duration: 800ms;
-    animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-fill-mode: forwards;
-    will-change: opacity;
-}
-
 @keyframes fade-out {
     100% {
         opacity: 0;
