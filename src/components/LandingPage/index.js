@@ -12,7 +12,7 @@ export class LandingPage extends React.Component {
                     height: 100%;
 
                     // TODO: Replace image with PhotoIllo
-                    background-image: url(http://4bp.blogspot.com/-zsg43eWUe_E/UUv7k-nZ_aI/AAAAAAAAAPs/5OKaXms0zOs/s1600/copy.JPG);
+                    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/8e/Royce_Hall%2C_University_of_California%2C_Los_Angeles_%2823-09-2003%29.jpg);
 
                     background-position: center;
                     background-repeat: no-repeat;
