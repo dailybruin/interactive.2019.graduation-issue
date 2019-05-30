@@ -8,7 +8,7 @@ export const mapIcon = new L.Icon({
     iconRetinaUrl: require("../../assets/pawprint.png"),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
-    iconSize: [40, 40],
+    iconSize: [60, 60],
     shadowSize: [29, 40],
     shadowAnchor: [7, 40],
 })
@@ -18,12 +18,12 @@ export class MyMap extends React.Component {
         super(props);
         this.refmarker = React.createRef();
         this.state = {
-            lat: 51.505,
-            lng: -0.09,
-            zoom: 13,
+            lat: 34.069156,
+            lng: -118.444180,
+            zoom: 16,
             marker: {
-                lat: 51.505,
-                lng: -0.09,
+                lat: 34.069156,
+                lng: -118.444180,
             },
         };
         this.updatePosition = this.updatePosition.bind(this);
