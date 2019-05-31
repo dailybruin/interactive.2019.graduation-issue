@@ -1,10 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 import { css } from 'emotion';
 import { mobile, notMobile } from "../Shared/mediaQueries";
-import { MyMap } from "../Map";
+import MyMap from "../Map";
 import { colors } from "../Shared/colors";
 
-export class Layout extends React.Component {
+class Layout extends React.Component {
     render() {
         return (
             <div className={css`
@@ -53,9 +54,15 @@ export class Layout extends React.Component {
                         font-size: 1.25rem;
                         text-align: center;
                         text-transform: uppercase;
-                    `}>Location: Inverted Fountain</h3>
+                    `}>Location: {this.props.location}</h3>
                 </div>
             </div>
         )
     }
 }
+
+const mapStateToProps = state => ({
+    location: state.location
+})
+
+export default connect(mapStateToProps)(Layout);
