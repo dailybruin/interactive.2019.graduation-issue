@@ -40,6 +40,7 @@ class Layout extends React.Component {
                         color: white;
                         text-align: center;
                         font-size: 3.13rem;
+                        margin: 0;
                     `}>Memories</h1>
                     <p className={css`
                         color: white;
@@ -47,6 +48,7 @@ class Layout extends React.Component {
                         font-size: 1rem;
                         text-align: center;
                         line-height: 1.9;
+                        margin: 0;
                     `}>Explainer for the interactive scrapbook. This panel is vertically scrollable and location specific. Clicking on a paw print prompts the input box and switches out these posts for those in that location.</p>
                     <h3 className={css`
                         color: white;
