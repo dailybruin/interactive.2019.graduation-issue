@@ -5,6 +5,8 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { config } from "../../config";
 import { setLocation } from "../../actions";
+import { css } from 'emotion'
+import MemoryModal from './MemoryModal'
 
 export const mapIcon = new L.Icon({
     iconUrl: require("../../assets/pawprint.png"),
@@ -28,6 +30,7 @@ class MyMap extends React.Component {
                 lat: 34.069156,
                 lng: -118.444180,
             },
+            displayModal: false,
         };
         this.updatePosition = this.updatePosition.bind(this);
     }
@@ -41,28 +44,43 @@ class MyMap extends React.Component {
         }
     }
 
+    markerOnClick(setLocation, locName) {
+        setLocation(locName)
+        this.setState({ displayModal: true })
+    }
+
+    mapOnClick() {
+        this.setState({ displayModal: false })
+    }
+
     render() {
         const position = [this.state.lat, this.state.lng];
         const markerPosition = [this.state.marker.lat, this.state.marker.lng]
         return (
-            <Map center={position} zoom={this.state.zoom}>
-                <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {config.locations.map(loc => (
-                    <Marker key={loc.name} position={[loc.lat, loc.long]} icon={mapIcon} onClick={() => this.props.setLocation(loc.name)}>
+            <div className={css`height: 100%; width: 100%; position: relative;`}>
+                <Map center={position} zoom={this.state.zoom} onClick={() => this.mapOnClick()}>
+                    <TileLayer
+                        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    {config.locations.map(loc => (
+                        <Marker key={loc.name} position={[loc.lat, loc.long]} icon={mapIcon} 
+                            onClick={() => this.markerOnClick(this.props.setLocation, loc.name)} 
+                        >
+                            <Popup>
+                                {loc.nickname ? loc.nickname : loc.name}
+                            </Popup>
+                        </Marker>
+                    ))}
+                    <Marker draggable={true} ref={this.refmarker} position={markerPosition} icon={mapIcon} onDragend={this.updatePosition}>
                         <Popup>
-                            {loc.nickname ? loc.nickname : loc.name}
+                            A pretty CSS3 popup. <br /> Easily customizable.
                         </Popup>
                     </Marker>
-                ))}
-                <Marker draggable={true} ref={this.refmarker} position={markerPosition} icon={mapIcon} onDragend={this.updatePosition}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
-            </Map>
+                </Map>
+                { this.state.displayModal && <MemoryModal /> }
+            </div>
+
         );
     }
 }

@@ -7,7 +7,7 @@ export class ArticleGrid extends React.Component {
         return (
             <div className={css`
                 background-color: ${colors.yellow};
-                width: 100vw;
+                width: 100%;
                 height: 90vh;
             `}>
                 <h1 className={css`
