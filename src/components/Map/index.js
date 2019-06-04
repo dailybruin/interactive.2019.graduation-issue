@@ -33,6 +33,7 @@ class MyMap extends React.Component {
             displayModal: false,
         };
         this.updatePosition = this.updatePosition.bind(this);
+        this.removeModal = this.removeModal.bind(this);
     }
 
     updatePosition() {
@@ -49,7 +50,8 @@ class MyMap extends React.Component {
         this.setState({ displayModal: true })
     }
 
-    mapOnClick() {
+    removeModal() {
+        console.log("LOL")
         this.setState({ displayModal: false })
     }
 
@@ -58,7 +60,7 @@ class MyMap extends React.Component {
         const markerPosition = [this.state.marker.lat, this.state.marker.lng]
         return (
             <div className={css`height: 100%; width: 100%; position: relative;`}>
-                <Map center={position} zoom={this.state.zoom} onClick={() => this.mapOnClick()}>
+                <Map center={position} zoom={this.state.zoom}>
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -67,9 +69,9 @@ class MyMap extends React.Component {
                         <Marker key={loc.name} position={[loc.lat, loc.long]} icon={mapIcon} 
                             onClick={() => this.markerOnClick(this.props.setLocation, loc.name)} 
                         >
-                            <Popup>
+                            {/* <Popup>
                                 {loc.nickname ? loc.nickname : loc.name}
-                            </Popup>
+                            </Popup> */}
                         </Marker>
                     ))}
                     <Marker draggable={true} ref={this.refmarker} position={markerPosition} icon={mapIcon} onDragend={this.updatePosition}>
@@ -78,7 +80,7 @@ class MyMap extends React.Component {
                         </Popup>
                     </Marker>
                 </Map>
-                { this.state.displayModal && <MemoryModal /> }
+                { this.state.displayModal && <MemoryModal removeModal={this.removeModal}/> }
             </div>
 
         );
