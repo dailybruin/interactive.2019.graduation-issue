@@ -9,8 +9,8 @@ export const config = {
         {
             "name": "The Study",
             "nickname": null,
-            "lat": 34.0729341,
-            "long": -118.4517536
+            "lat": 34.07287317362402,
+            "long": -118.45197835938497
         },
         {
             "name": "Rendezvous",
@@ -99,14 +99,14 @@ export const config = {
         {
             "name": "Pauley Pavilion",
             "nickname": null,
-            "lat": 34.0701632,
-            "long": -118.4504737
+            "lat": 34.07033243430643,
+            "long": -118.44687251813035
         },
         {
             "name": "Intramural Field",
             "nickname": null,
-            "lat": 34.0712951,
-            "long": -118.4483464
+            "lat": 34.072288293732704,
+            "long": -118.44686045392649
         },
         {
             "name": "Counseling and Psychological Services",
@@ -129,8 +129,8 @@ export const config = {
         {
             "name": "Kerckhoff Hall",
             "nickname": null,
-            "lat": 34.0705438,
-            "long": -118.4443045
+            "lat": 34.0702297049743,
+            "long": -118.44346375412564
         },
         {
             "name": "LGBT Center",
@@ -147,14 +147,14 @@ export const config = {
         {
             "name": "Royce Hall",
             "nickname": null,
-            "lat": 34.0717753,
-            "long": -118.4422207
+            "lat": 34.07238106023553,
+            "long": -118.44221452482724
         },
         {
             "name": "Powell Library",
             "nickname": null,
-            "lat": 34.0717753,
-            "long": -118.4422207
+            "lat": 34.07136943829164,
+            "long": -118.442164874090
         },
         {
             "name": "Haines Hall",
@@ -171,14 +171,14 @@ export const config = {
         {
             "name": "Physics and Astronomy Building",
             "nickname": "PAB",
-            "lat": 34.0711818,
-            "long": -118.441175
+            "lat": 34.070555384293264,
+            "long": -118.44170641133732
         },
         {
             "name": "Dodd Hall",
             "nickname": null,
-            "lat": 34.0718979,
-            "long": -118.4402398
+            "lat": 34.07227187825042,
+            "long": -118.4394318106462
         },
         {
             "name": "Kinsey Hall",
@@ -207,8 +207,8 @@ export const config = {
         {
             "name": "Geology Building",
             "nickname": null,
-            "lat": 34.0689054,
-            "long": -118.4421992
+            "lat": 34.06902533308805,
+            "long": -118.4416915617762
         },
         {
             "name": "Bombshelter Cafe",
@@ -219,8 +219,8 @@ export const config = {
         {
             "name": "La Kretz Hall",
             "nickname": null,
-            "lat": 34.0676196,
-            "long": -118.442831
+            "lat": 34.067350768900646,
+            "long": -118.44274492877452
         },
         {
             "name": "CNSI",
@@ -237,8 +237,8 @@ export const config = {
         {
             "name": "Inverted Fountain",
             "nickname": null,
-            "lat": 34.0699889,
-            "long": -118.4400324
+            "lat": 34.06990430205145,
+            "long": -118.44074144152245
         },
         {
             "name": "Franz Hall",
@@ -249,8 +249,8 @@ export const config = {
         {
             "name": "Mo Ostin Music Center",
             "nickname": "Schoenberg Hall",
-            "lat": 34.0700867,
-            "long": -118.4405721
+            "lat": 34.070541987875394,
+            "long": -118.44016754844388
         },
         {
             "name": "Broad Art Center",
@@ -267,8 +267,8 @@ export const config = {
         {
             "name": "Luskin School of Public Affairs",
             "nickname": "PubAff",
-            "lat": 34.0741975,
-            "long": -118.4406569
+            "lat": 34.074197222573126,
+            "long": -118.43912425121489
         },
         {
             "name": "Sculpture Garden",
@@ -279,8 +279,8 @@ export const config = {
         {
             "name": "Charles E Young Research Library",
             "nickname": "YRL",
-            "lat": 34.075229,
-            "long": -118.441761
+            "lat": 34.07454072455405,
+            "long": -118.44116905209694
         },
         {
             "name": "James Bridges Theater",
@@ -291,32 +291,32 @@ export const config = {
         {
             "name": "Anderson School of Management",
             "nickname": null,
-            "lat": 34.073969,
-            "long": -118.443553
+            "lat": 34.073410369433425,
+            "long": -118.44366939390153
         },
         {
             "name": "Fowler Museum",
             "nickname": null,
-            "lat": 34.073142,
-            "long": -118.443133
+            "lat": 34.07253060233813,
+            "long": -118.44302370790697
         },
         {
             "name": "Engineering IV",
             "nickname": null,
-            "lat": 34.068876,
-            "long": -118.444363
+            "lat": 34.0694782326509,
+            "long": -118.44437583895571
         },
         {
             "name": "Moore Hall",
             "nickname": null,
-            "lat": 34.0706013,
-            "long": -118.442186
+            "lat": 34.069968473439246,
+            "long": -118.44266251274132
         },
         {
             "name": "Bruin Bear",
             "nickname": null,
-            "lat": 34.070938,
-            "long": -118.444861
+            "lat": 34.07051883913793,
+            "long": -118.44508246630292
         },
         {
             "name": "Drake Stadium",
@@ -327,8 +327,8 @@ export const config = {
         {
             "name": "Acosta Athletics Center",
             "nickname": null,
-            "lat": 34.07076,
-            "long": -118.448095
+            "lat": 34.07037723952679,
+            "long": -118.44780483441153
         }
     ]
 };
