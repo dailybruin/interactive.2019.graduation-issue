@@ -46,7 +46,7 @@ class MyMap extends React.Component {
         const position = [this.state.lat, this.state.lng];
         const markerPosition = [this.state.marker.lat, this.state.marker.lng]
         return (
-            <Map center={position} zoom={this.state.zoom} maxBounds={[[34.07925, -118.45774], [34.06278, -118.4362]]}>
+            <Map center={position} zoom={this.state.zoom} minZoom={16} maxBounds={[[34.07925, -118.45774], [34.06278, -118.4362]]}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
