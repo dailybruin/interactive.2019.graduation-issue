@@ -9,8 +9,8 @@ export const config = {
         {
             "name": "The Study",
             "nickname": null,
-            "lat": 34.0729341,
-            "long": -118.4517536
+            "lat": 34.07287317362402,
+            "long": -118.45197835938497
         },
         {
             "name": "Rendezvous",
@@ -129,8 +129,8 @@ export const config = {
         {
             "name": "Kerckhoff Hall",
             "nickname": null,
-            "lat": 34.0705438,
-            "long": -118.4443045
+            "lat": 34.0702297049743,
+            "long": -118.44346375412564
         },
         {
             "name": "LGBT Center",
@@ -297,8 +297,8 @@ export const config = {
         {
             "name": "Fowler Museum",
             "nickname": null,
-            "lat": 34.073142,
-            "long": -118.443133
+            "lat": 34.07253060233813,
+            "long": -118.44302370790697
         },
         {
             "name": "Engineering IV",
