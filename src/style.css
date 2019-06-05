@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 @keyframes fade-out {
@@ -7,4 +8,24 @@ body {
         opacity: 0;
         display: none;
     }
+}
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.leaflet-container {
+    overflow: hidden;
+    height: 100%;
 }
