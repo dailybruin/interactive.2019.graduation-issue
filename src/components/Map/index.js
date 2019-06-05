@@ -59,7 +59,13 @@ class MyMap extends React.Component {
         const position = [this.state.lat, this.state.lng];
         const markerPosition = [this.state.marker.lat, this.state.marker.lng];
         return (
-            <>
+            <div
+                className={css`
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                `}
+            >
                 <Map
                     center={position}
                     zoom={this.state.zoom}
@@ -106,7 +112,7 @@ class MyMap extends React.Component {
                 {this.state.displayModal && (
                     <MemoryModal removeModal={this.removeModal} />
                 )}
-            </>
+            </div>
         );
     }
 }

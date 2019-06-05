@@ -2,17 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { css } from "emotion";
 import { mobile, notMobile } from "../Shared/mediaQueries";
-import MyMap from "../Map";
 import { colors } from "../Shared/colors";
 
 class MemoryModal extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             memoryText: ""
         };
-
         this.addToMap = this.addToMap.bind(this);
         this.memoryTextChange = this.memoryTextChange.bind(this);
     }
@@ -21,8 +18,6 @@ class MemoryModal extends React.Component {
         const { memoryText } = this.state;
         if (memoryText == "") return;
         console.log("adding to map...");
-        console.log(this.props.location);
-        console.log(this.state.memoryText);
     }
 
     memoryTextChange(event) {
@@ -42,6 +37,10 @@ class MemoryModal extends React.Component {
                     transform: translate(-50%, -50%);
                     z-index: 500;
                     box-shadow: 10px 10px 5px grey;
+
+                    ${mobile} {
+                        width: 80%;
+                    }
                 `}
             >
                 <div
@@ -90,7 +89,14 @@ class MemoryModal extends React.Component {
                             margin-bottom: 10px;
                         `}
                     >
-                        <strong>Location: </strong> {this.props.location}
+                        <strong
+                            className={css`
+                                text-transform: uppercase;
+                            `}
+                        >
+                            Location:{" "}
+                        </strong>{" "}
+                        {this.props.location}
                     </div>
                     <div
                         className={css`
@@ -106,7 +112,7 @@ class MemoryModal extends React.Component {
                                 width: 90%;
                                 outline: none;
                                 text-align: top;
-                                font-family: "Times New Roman", Times, serif;
+                                font-size: 0.8em;
                             `}
                         />
                     </div>
