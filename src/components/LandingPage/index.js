@@ -6,15 +6,14 @@ export class LandingPage extends React.Component {
         return (
             <div
                 className={css`
-                    display: block;
-                    position: absolute;
+                    position: fixed;
                     z-index: 1001;
                     width: 100%;
                     height: 100%;
 
                     top: 0;
                     animation-name: fade-out;
-                    animation-delay: 2s;
+                    animation-delay: 4s;
                     animation-duration: 800ms;
                     animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
                     animation-fill-mode: forwards;
@@ -26,6 +25,26 @@ export class LandingPage extends React.Component {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+
+                    :after {
+                        content: "\A";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        background: linear-gradient(
+                            to bottom,
+                            rgba(0, 0, 0, 0),
+                            rgba(0, 0, 0, 0.4) 95% 100%
+                        );
+                        animation-name: fade-in;
+                        animation-delay: 3.8s;
+                        animation-duration: 800ms;
+                        animation-fill-mode: forwards;
+                        will-change: opacity;
+                    }
                 `}
                 id="LandingPage"
             >
@@ -44,7 +63,6 @@ export class LandingPage extends React.Component {
                             display: table-cell;
 
                             color: white;
-                            font-family: Source Sans Pro;
                             font-style: normal;
                             font-weight: 900;
                             text-align: center;

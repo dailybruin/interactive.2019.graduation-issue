@@ -28,9 +28,9 @@
     },
     "license": "ITC",
     "lint-staged": {
-    "*.{js,jsx,css}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+        "*.{js,jsx,css}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
 }
