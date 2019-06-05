@@ -1,6 +1,13 @@
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+        display: none;
+    }
 }
 
 .leaflet-pane,

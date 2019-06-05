@@ -1,11 +1,13 @@
 import React from "react";
 import Layout from "./Layout";
 import { ArticleGrid } from "./ArticleGrid";
+import { LandingPage } from "./LandingPage";
 
 export class App extends React.Component {
     render() {
         return (
             <>
+                <LandingPage />
                 <Layout />
                 <ArticleGrid />
             </>
