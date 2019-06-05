@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { css } from "emotion";
+import MemoryModal from "./MemoryModal";
 import { Map, TileLayer, Marker, Popup, ImageOverlay } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { config } from "../../config";
 import { setLocation } from "../../actions";
-import { css } from "emotion";
-import MemoryModal from "./MemoryModal";
 
 export const mapIcon = new L.Icon({
     iconUrl: require("../../assets/pawprint.png"),
@@ -29,11 +29,11 @@ class MyMap extends React.Component {
             marker: {
                 lat: 34.069156,
                 lng: -118.44418
-            },
-            displayModal: false
+            }
         };
         this.updatePosition = this.updatePosition.bind(this);
         this.removeModal = this.removeModal.bind(this);
+        this.markerOnClick = this.markerOnClick.bind(this);
     }
 
     updatePosition() {
@@ -52,7 +52,6 @@ class MyMap extends React.Component {
     }
 
     removeModal() {
-        console.log("LOL");
         this.setState({ displayModal: false });
     }
 
@@ -60,17 +59,20 @@ class MyMap extends React.Component {
         const position = [this.state.lat, this.state.lng];
         const markerPosition = [this.state.marker.lat, this.state.marker.lng];
         return (
-            <div
-                className={css`
-                    height: 100%;
-                    width: 100%;
-                    position: relative;
-                `}
-            >
-                <Map center={position} zoom={this.state.zoom}>
+            <>
+                <Map
+                    center={position}
+                    zoom={this.state.zoom}
+                    minZoom={16}
+                    maxBounds={[[34.07925, -118.45774], [34.06278, -118.4362]]}
+                >
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <ImageOverlay
+                        url={require("../../assets/map.png")}
+                        bounds={[[34.07925, -118.45774], [34.06278, -118.4362]]}
                     />
                     {config.locations.map(loc => (
                         <Marker
@@ -84,9 +86,9 @@ class MyMap extends React.Component {
                                 )
                             }
                         >
-                            {/* <Popup>
+                            <Popup>
                                 {loc.nickname ? loc.nickname : loc.name}
-                            </Popup> */}
+                            </Popup>
                         </Marker>
                     ))}
                     <Marker
@@ -104,7 +106,7 @@ class MyMap extends React.Component {
                 {this.state.displayModal && (
                     <MemoryModal removeModal={this.removeModal} />
                 )}
-            </div>
+            </>
         );
     }
 }
