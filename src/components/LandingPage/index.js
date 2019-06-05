@@ -8,7 +8,7 @@ export class LandingPage extends React.Component {
                 className={css`
                     display: block;
                     position: absolute;
-                    z-index: 1000;
+                    z-index: 1001;
                     width: 100%;
                     height: 100%;
 
