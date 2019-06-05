@@ -12,7 +12,7 @@ class Layout extends React.Component {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-                width: 100vw;
+                width: 100%;
                 height: 90vh;
 
                 ${mobile} {
