@@ -116,7 +116,7 @@ class MemoryModal extends React.Component {
                             cursor: pointer;
                             text-transform: uppercase;
                             position: absolute;
-                            color: ${colors.gray};
+                            color: ${colors.slate};
                             &:hover {
                                 color: black;
                             }
