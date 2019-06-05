@@ -28,5 +28,11 @@
         "lint-staged": "^8.1.7",
         "node-sass": "^4.12.0"
     },
-    "license": "ITC"
+    "license": "ITC",
+    "lint-staged": {
+    "*.{js,jsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
