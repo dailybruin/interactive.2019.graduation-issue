@@ -7,6 +7,7 @@ export function Card({ text }) {
         <div
             className={css`
                 background-color: white;
+                margin-bottom: 1.2em;
             `}
         >
             <div

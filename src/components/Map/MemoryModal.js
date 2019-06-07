@@ -29,9 +29,9 @@ class MemoryModal extends React.Component {
             })
         })
             .then(() => {
-                // if (window) {
-                //     window.location.reload();
-                // }
+                if (window) {
+                    window.location.reload();
+                }
             })
             .catch(err => {
                 console.log(err);
