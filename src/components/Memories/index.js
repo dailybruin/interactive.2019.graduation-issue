@@ -10,9 +10,8 @@ class Memories extends React.Component {
         };
     }
 
-    componentDidMount() {
-        console.log(this.props);
-        if (this.props.location) {
+    componentDidUpdate(prevProps) {
+        if (this.props.location != prevProps.location) {
             fetch(
                 `https://gradissue2019.backend.dailybruin.com/${
                     this.props.location
