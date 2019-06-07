@@ -18,6 +18,29 @@ class MemoryModal extends React.Component {
         const { memoryText } = this.state;
         if (memoryText == "") return;
         console.log("adding to map...");
+        fetch(
+            `https://gradissue2019.backend.dailybruin.com/${
+                this.props.location
+            }`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.strigify({
+                    location: this.props.location,
+                    text: memoryText
+                })
+            }
+        )
+            .then(() => {
+                if (window) {
+                    window.location.reload();
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 
     memoryTextChange(event) {
