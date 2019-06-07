@@ -91,11 +91,7 @@ class MyMap extends React.Component {
                                     loc.name
                                 )
                             }
-                        >
-                            <Popup>
-                                {loc.nickname ? loc.nickname : loc.name}
-                            </Popup>
-                        </Marker>
+                        />
                     ))}
                     <Marker
                         draggable={true}
