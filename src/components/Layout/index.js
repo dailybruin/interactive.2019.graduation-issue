@@ -35,6 +35,7 @@ class Layout extends React.Component {
                         flex-grow: 1;
                         flex-basis: 0;
                         padding: 2rem;
+                        overflow: scroll;
                         background-color: ${colors.blue};
                         ${notMobile} {
                             max-width: 33.333%;
@@ -69,8 +70,7 @@ class Layout extends React.Component {
                     >
                         Explainer for the interactive scrapbook. This panel is
                         vertically scrollable and location specific. Clicking on
-                        a paw print prompts the input box and switches out these
-                        posts for those in that location.
+                        a paw print prompts the input box and
                     </p>
                     <h3
                         className={css`
