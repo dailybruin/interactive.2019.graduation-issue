@@ -4,6 +4,7 @@ import { css } from "emotion";
 import { mobile, notMobile } from "../Shared/mediaQueries";
 import MyMap from "../Map";
 import { colors } from "../Shared/colors";
+import Memories from "../Memories";
 
 class Layout extends React.Component {
     render() {
@@ -84,6 +85,7 @@ class Layout extends React.Component {
                             ? `Location: ${this.props.location}`
                             : "Click a paw to see or add some memories!"}
                     </h3>
+                    <Memories />
                 </div>
             </div>
         );
