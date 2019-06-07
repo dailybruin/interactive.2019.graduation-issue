@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Card } from "./Card";
 
 class Memories extends React.Component {
     constructor(props) {
@@ -19,7 +20,6 @@ class Memories extends React.Component {
             )
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     this.setState({
                         loading: false,
                         data
@@ -37,7 +37,7 @@ class Memories extends React.Component {
         if (this.state.loading) {
             return null;
         }
-        return <div />;
+        return this.state.data.map(x => <Card text={x.text} />);
     }
 }
 
