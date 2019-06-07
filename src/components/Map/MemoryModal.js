@@ -27,7 +27,7 @@ class MemoryModal extends React.Component {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.strigify({
+                body: JSON.stringify({
                     location: this.props.location,
                     text: memoryText
                 })
