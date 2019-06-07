@@ -8,9 +8,18 @@ const { Memory } = require("./db");
 const MIN = 15 * 60 * 1000; // 15 minutes
 
 const PORT = 8080;
-const ORIGIN = "https://features.dailybruin.com/2019/graduation-issue";
+const whitelist = [
+    "https://features.dailybruin.com/2019/graduation-issue",
+    "https://infallible-pare-141933.netlify.com"
+];
 const corsOptions = {
-    origin: ORIGIN,
+    origin: function(origin, callback) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     optionsSuccessStatus: 200
 };
 const limiter = rateLimit({
