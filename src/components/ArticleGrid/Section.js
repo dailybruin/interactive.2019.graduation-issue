@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "emotion";
 import ArticleCard from "./ArticleCard";
 import { colors } from "../Shared/colors";
+import { mobile } from "../Shared/mediaQueries";
 
 export class Section extends React.Component {
     render() {
@@ -36,12 +37,16 @@ export class Section extends React.Component {
             >
                 <h2
                     className={css`
-                        font-size: ${this.props.data.section.length > 10
-                            ? "3rem"
-                            : "4rem"};
+                        font-size: 4rem;
                         color: ${colors.slate};
                         text-transform: uppercase;
                         margin-bottom: 0.4em;
+
+                        ${mobile} {
+                            font-size: ${this.props.data.section.length > 10
+                                ? "3rem"
+                                : "4rem"};
+                        }
                     `}
                 >
                     {this.props.data.section}
