@@ -11,19 +11,26 @@ class Memories extends React.Component {
     }
 
     componentWillMount() {
-        fetch(
-            `https://gradissue2019.backend.dailybruin.com/${
-                this.props.location
-            }`
-        )
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                this.setState({
-                    loading: false,
-                    data
+        if (this.props.location) {
+            fetch(
+                `https://gradissue2019.backend.dailybruin.com/${
+                    this.props.location
+                }`
+            )
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        loading: false,
+                        data
+                    });
+                })
+                .catch(err => {
+                    this.setState({
+                        loading: false
+                    });
                 });
-            });
+        }
     }
 
     render() {
