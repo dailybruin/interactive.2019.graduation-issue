@@ -6,7 +6,6 @@ import { mobile } from "../Shared/mediaQueries";
 
 export class Section extends React.Component {
     render() {
-        console.log(this.props.data);
         const articles = this.props.data.content.map((article, i) => (
             <ArticleCard article={article} key={i} />
         ));

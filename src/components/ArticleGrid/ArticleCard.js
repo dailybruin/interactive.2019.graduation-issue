@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "emotion";
 import { colors } from "../Shared/colors";
 
-export default function StoryCard(content) {
+export default function ArticleCard({ article }) {
     return (
         <article
             className={css`
@@ -12,19 +12,19 @@ export default function StoryCard(content) {
             `}
         >
             <a
-                href={content.link}
+                href={article.link}
                 className={css`
                     color: ${colors.slate};
                     text-decoration: none;
                     width: 100%;
                 `}
             >
-                <img src={content.imageurl} alt={content.imagedescription} />
+                <img src={article.image} alt={article.imagedescription} />
                 <h3 className="headline">
-                    {content.italics ? (
-                        <em>{content.headline}</em>
+                    {article.italics ? (
+                        <em>{article.headline}</em>
                     ) : (
-                        content.headline
+                        article.headline
                     )}
                 </h3>
                 <div
@@ -32,7 +32,7 @@ export default function StoryCard(content) {
                         text-transform: uppercase;
                     `}
                 >
-                    By {content.byline}
+                    By {article.author}
                 </div>
             </a>
         </article>
