@@ -19,7 +19,13 @@ export default function ArticleCard({ article }) {
                     width: 100%;
                 `}
             >
-                <img src={article.image} alt={article.imagedescription} />
+                <img
+                    className={css`
+                        max-width: 100%;
+                    `}
+                    src={article.image}
+                    alt={article.imagedescription}
+                />
                 <h3 className="headline">
                     {article.italics ? (
                         <em>{article.headline}</em>
