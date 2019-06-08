@@ -50,6 +50,16 @@ export class Section extends React.Component {
                 >
                     {this.props.data.section}
                 </h2>
+                {this.props.data.blurb ? (
+                    <p
+                        className={css`
+                            color: ${colors.slate};
+                            font-size: 1.2em;
+                        `}
+                    >
+                        {this.props.data.blurb}
+                    </p>
+                ) : null}
                 <div className={gridStyles}>{articles}</div>
             </div>
         );
