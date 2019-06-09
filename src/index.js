@@ -39,7 +39,7 @@ function setVisitedCookie() {
 function checkVistiedCookie() {
     var cookies = document.cookie.split(";");
     for (var i = 0; i < cookies.length; i++) {
-        if (cookies[i] == "visited=true") {
+        if (cookies[i].trim() == "visited=true") {
             return true;
         }
     }
