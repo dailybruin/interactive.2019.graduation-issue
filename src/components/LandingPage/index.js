@@ -8,29 +8,23 @@ export class LandingPage extends React.Component {
                 className={css`
                     position: fixed;
                     z-index: 1001;
-                    width: 100%;
-                    height: 100%;
-
+                    width: 100vw;
+                    height: 100vh;
                     top: 0;
+                    left: 0;
+
                     animation-name: fade-out;
-                    animation-delay: 4s;
+                    animation-delay: 10.2s;
                     animation-duration: 800ms;
                     animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
                     animation-fill-mode: forwards;
                     will-change: opacity;
 
-                    // TODO: Replace image with PhotoIllo
-                    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/8e/Royce_Hall%2C_University_of_California%2C_Los_Angeles_%2823-09-2003%29.jpg);
-
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-
                     :after {
                         content: "\A";
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
+                        width: 100vw;
+                        height: 100vh;
                         top: 0;
                         left: 0;
                         opacity: 0;
@@ -40,7 +34,7 @@ export class LandingPage extends React.Component {
                             rgba(0, 0, 0, 0.4) 95% 100%
                         );
                         animation-name: fade-in;
-                        animation-delay: 3.8s;
+                        animation-delay: 10s;
                         animation-duration: 800ms;
                         animation-fill-mode: forwards;
                         will-change: opacity;
@@ -48,58 +42,28 @@ export class LandingPage extends React.Component {
                 `}
                 id="LandingPage"
             >
-                <div
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className={css`
                         height: 100%;
-                        width: 100%;
-                        display: table;
-                        background: rgba(0, 0, 0, 0.4);
+                        width: 133.333333333; /* 100 * 1600 / 1200 */
+                        min-width: 100%;
+                        min-height: 75vw; /* 100 * 1200 / 1600 */
+
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
                     `}
                 >
-                    <div
-                        className={css`
-                            vertical-align: middle;
-                            height: 100%;
-                            display: table-cell;
-
-                            color: white;
-                            font-style: normal;
-                            font-weight: 900;
-                            text-align: center;
-                            line-height: 100%;
-                        `}
-                    >
-                        <p
-                            className={css`
-                                font-size: 2.5vw;
-                                letter-spacing: 0.2em;
-                                margin: 0;
-                                line-height: normal;
-                            `}
-                        >
-                            THE DAILY BRUIN
-                        </p>
-                        <p
-                            className={css`
-                                font-size: 8vw;
-                                margin: 0;
-                                line-height: normal;
-                            `}
-                        >
-                            graduation issue
-                        </p>
-                        <p
-                            className={css`
-                                font-size: 2.5vw;
-                                letter-spacing: 0.2em;
-                                margin: 0;
-                                line-height: normal;
-                            `}
-                        >
-                            2019
-                        </p>
-                    </div>
-                </div>
+                    <source
+                        src={require("../../assets/video.mp4")}
+                        type="video/mp4"
+                    />
+                </video>
             </div>
         );
     }
