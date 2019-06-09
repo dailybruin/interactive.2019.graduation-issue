@@ -120,6 +120,7 @@ class MemoryModal extends React.Component {
                         className={css`
                             height: 100%;
                             width: 100%;
+                            text-align: center;
                         `}
                     >
                         <textarea
@@ -131,6 +132,7 @@ class MemoryModal extends React.Component {
                                 outline: none;
                                 text-align: top;
                                 font-size: 0.8em;
+                                resize: none;
                             `}
                         />
                     </div>

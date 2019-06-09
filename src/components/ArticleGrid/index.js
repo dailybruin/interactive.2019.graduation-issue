@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "emotion";
 import { Section } from "./Section";
 import { colors } from "../Shared/colors";
+import { mobile, notMobile } from "../Shared/mediaQueries";
 
 export class ArticleGrid extends React.Component {
     constructor(props) {
@@ -49,6 +50,8 @@ export class ArticleGrid extends React.Component {
                     min-height: 90vh;
                     text-align: center;
                     padding: 1em;
+                    transition: background-color 500ms, color 500ms;
+                    -webkit-transition: background-color 500ms, color 500ms;
                 `}
             >
                 <h4
@@ -66,10 +69,31 @@ export class ArticleGrid extends React.Component {
                         text-transform: lowercase;
                         font-size: 4.38rem;
                         margin: 0;
+                        ${mobile} {
+                            font-size: 11vw;
+                        }
                     `}
                 >
                     graduation issue
                 </h1>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    className={css`
+                        margin-top: -20px;
+                        ${mobile} {
+                            display: none;
+                        }
+                    `}
+                >
+                    <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        fill="#fff"
+                    />
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                </svg>
                 {this.state.data.length
                     ? this.state.data.map(section => <Section data={section} />)
                     : null}

@@ -15,10 +15,14 @@ class Layout extends React.Component {
                     flex-direction: row;
                     justify-content: flex-start;
                     width: 100%;
-                    height: 90vh;
-
+                    height: calc(100vh - 140px);
                     ${mobile} {
+                        height: calc(100vh - 40px);
                         flex-direction: column-reverse;
+                    }
+                    // fix for Android screens
+                    @media screen and (max-height: 400px) {
+                        min-height: 600px;
                     }
                 `}
             >
