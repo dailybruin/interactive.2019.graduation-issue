@@ -23,6 +23,8 @@ export class Section extends React.Component {
                           1fr
                       );
                       grid-gap: 20px;
+                      padding-left: 2em;
+                      padding-right: 2em;
                       @media (max-width: 900px) {
                           grid-template-columns: repeat(2, 1fr);
                       }
