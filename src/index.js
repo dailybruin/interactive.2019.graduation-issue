@@ -9,9 +9,15 @@ const store = createStore(reducer);
 
 // SSR (Server Side Rendering) safe
 if (document != null) {
+    // Cookies for Landing Page
+    const visited = checkVistiedCookie();
+    if (!visited) {
+        setVisitedCookie();
+    }
+
     ReactDOM.render(
         <Provider store={store}>
-            <App />
+            <App visited={visited} />
         </Provider>,
         document.getElementById("root")
     );
@@ -20,12 +26,6 @@ if (document != null) {
     if (module.hot) {
         module.hot.accept();
     }
-
-    // Cookies for Landing Page
-    if (checkVistiedCookie()) {
-        document.getElementById("LandingPage").style.display = "none";
-    }
-    setVisitedCookie();
 }
 
 // Cookie Utilities

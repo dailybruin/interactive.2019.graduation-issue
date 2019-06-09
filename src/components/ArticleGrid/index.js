@@ -88,7 +88,9 @@ export class ArticleGrid extends React.Component {
                     graduation issue
                 </h1>
                 {this.state.data.length
-                    ? this.state.data.map(section => <Section data={section} />)
+                    ? this.state.data.map(section => (
+                          <Section key={section.section} data={section} />
+                      ))
                     : null}
             </div>
         );
