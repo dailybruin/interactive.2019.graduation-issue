@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "emotion";
 import { Section } from "./Section";
 import { colors } from "../Shared/colors";
+import { Header } from "./Header";
 
 export class ArticleGrid extends React.Component {
     constructor(props) {
@@ -57,10 +58,15 @@ export class ArticleGrid extends React.Component {
                     min-height: 90vh;
                     text-align: center;
                     padding: 1em;
+                    padding-top: 0.5em;
                     border-top: 2vh solid white;
                 `}
             >
                 <img
+                    className={css`
+                        margin-bottom: -6px;
+                        margin-top: -6px;
+                    `}
                     src={
                         this.state.colorswitch
                             ? require("../../assets/chevron-blue.svg")
@@ -68,26 +74,10 @@ export class ArticleGrid extends React.Component {
                     }
                     alt="Scroll down"
                 />
-                <h4
-                    className={css`
-                        text-transform: uppercase;
-                        margin: 0px;
-                        margin-bottom: -8px;
-                        margin-top: 6px;
-                    `}
-                >
-                    The Daily Bruin
-                </h4>
-                <h1
-                    className={css`
-                        font-weight: 900;
-                        text-transform: lowercase;
-                        font-size: 4.38rem;
-                        margin: 0;
-                    `}
-                >
-                    graduation issue
-                </h1>
+                <Header
+                    colorswitch={this.state.colorswitch}
+                    sections={this.state.data.map(x => x.section)}
+                />
                 {this.state.data.length
                     ? this.state.data.map(section => (
                           <Section key={section.section} data={section} />

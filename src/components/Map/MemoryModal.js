@@ -54,7 +54,7 @@ class MemoryModal extends React.Component {
                     top: 50%;
                     transform: translate(-50%, -50%);
                     z-index: 500;
-                    box-shadow: 10px 10px 5px grey;
+                    box-shadow: 8px 8px 10px grey;
 
                     ${mobile} {
                         width: 80%;

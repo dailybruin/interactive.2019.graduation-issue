@@ -34,13 +34,15 @@ export default function ArticleCard({ article }) {
                         article.headline
                     )}
                 </h3>
-                <div
-                    className={css`
-                        text-transform: uppercase;
-                    `}
-                >
-                    By {article.author}
-                </div>
+                {article.author ? (
+                    <div
+                        className={css`
+                            text-transform: uppercase;
+                        `}
+                    >
+                        By {article.author}
+                    </div>
+                ) : null}
             </a>
         </article>
     );

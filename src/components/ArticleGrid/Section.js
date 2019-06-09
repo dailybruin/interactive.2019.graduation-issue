@@ -15,7 +15,11 @@ export class Section extends React.Component {
                 ? css`
                       display: grid;
                       grid-template-columns: repeat(
-                          ${this.props.data.content.length == 2 ? 2 : 3},
+                          ${this.props.data.section === "-30-"
+                              ? 5
+                              : this.props.data.content.length == 2
+                              ? 2
+                              : 3},
                           1fr
                       );
                       grid-gap: 20px;

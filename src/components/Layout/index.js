@@ -10,6 +10,7 @@ class Layout extends React.Component {
     render() {
         return (
             <div
+                id="map"
                 className={css`
                     display: flex;
                     flex-direction: row;
@@ -68,9 +69,9 @@ class Layout extends React.Component {
                             }
                         `}
                     >
-                        Explore around the campus by clicking paw prints! Read
-                        other students' memories below or add your own after
-                        picking a place!
+                        As you leave your final mark at UCLA, reflect on the
+                        spaces that defined this campus and your college career.
+                        What do you remember?
                     </p>
                     <h3
                         className={css`

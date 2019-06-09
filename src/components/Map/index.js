@@ -57,7 +57,6 @@ class MyMap extends React.Component {
 
     render() {
         const position = [this.state.lat, this.state.lng];
-        const markerPosition = [this.state.marker.lat, this.state.marker.lng];
         return (
             <div
                 className={css`
@@ -93,17 +92,6 @@ class MyMap extends React.Component {
                             }
                         />
                     ))}
-                    <Marker
-                        draggable={true}
-                        ref={this.refmarker}
-                        position={markerPosition}
-                        icon={mapIcon}
-                        onDragend={this.updatePosition}
-                    >
-                        <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
-                        </Popup>
-                    </Marker>
                 </Map>
                 {this.state.displayModal && (
                     <MemoryModal removeModal={this.removeModal} />
