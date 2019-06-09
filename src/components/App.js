@@ -7,7 +7,7 @@ export class App extends React.Component {
     render() {
         return (
             <>
-                {this.props.visited && <LandingPage />}
+                {!this.props.visited && <LandingPage />}
                 <Layout />
                 <ArticleGrid />
             </>
