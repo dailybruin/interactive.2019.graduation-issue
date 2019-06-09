@@ -57,6 +57,7 @@ export class ArticleGrid extends React.Component {
                     min-height: 90vh;
                     text-align: center;
                     padding: 1em;
+                    border-top: 2vh solid white;
                 `}
             >
                 <img
