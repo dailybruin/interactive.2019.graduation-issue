@@ -15,7 +15,7 @@ class Layout extends React.Component {
                     flex-direction: row;
                     justify-content: flex-start;
                     width: 100%;
-                    height: 90vh;
+                    height: 80vh;
 
                     ${mobile} {
                         flex-direction: column-reverse;
@@ -68,9 +68,9 @@ class Layout extends React.Component {
                             }
                         `}
                     >
-                        Explainer for the interactive scrapbook. This panel is
-                        vertically scrollable and location specific. Clicking on
-                        a paw print prompts the input box and
+                        Explore around the campus by clicking paw prints! Read
+                        other students' memories below or add your own after
+                        picking a place!
                     </p>
                     <h3
                         className={css`

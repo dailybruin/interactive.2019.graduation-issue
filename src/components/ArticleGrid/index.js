@@ -37,6 +37,14 @@ export class ArticleGrid extends React.Component {
             });
     }
 
+    componentWillUnmount() {
+        // This fixes the "leaky component" error
+        // Make sure to remove any event listeners you add!
+        if (window) {
+            window.removeEventListener("scroll", this.listenScrollEvent);
+        }
+    }
+
     render() {
         return (
             <div
@@ -51,11 +59,20 @@ export class ArticleGrid extends React.Component {
                     padding: 1em;
                 `}
             >
+                <img
+                    src={
+                        this.state.colorswitch
+                            ? require("../../assets/chevron-blue.svg")
+                            : require("../../assets/chevron.svg")
+                    }
+                    alt="Scroll down"
+                />
                 <h4
                     className={css`
                         text-transform: uppercase;
                         margin: 0px;
                         margin-bottom: -8px;
+                        margin-top: 6px;
                     `}
                 >
                     The Daily Bruin

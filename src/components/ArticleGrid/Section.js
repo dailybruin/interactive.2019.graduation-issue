@@ -30,6 +30,7 @@ export class Section extends React.Component {
 
         return (
             <div
+                id={this.props.data.section}
                 className={css`
                     text-align: center;
                 `}
