@@ -37,10 +37,13 @@ export function Header({ colorswitch, sections }) {
                 className={css`
                     display: flex;
                     justify-content: space-around;
+                    flex-wrap: wrap;
+                    -ms-flex-pack: distribute;
 
                     a {
                         color: ${colorswitch ? colors.blue : "white"};
                         font-weight: bold;
+                        padding-right: 2em;
                     }
                 `}
             >
