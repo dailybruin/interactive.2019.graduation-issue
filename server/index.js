@@ -9,7 +9,7 @@ const MIN = 15 * 60 * 1000; // 15 minutes
 
 const PORT = 8080;
 const whitelist = [
-    "https://features.dailybruin.com/2019/graduation-issue",
+    "https://features.dailybruin.com",
     "https://infallible-pare-141933.netlify.com"
 ];
 const corsOptions = {
