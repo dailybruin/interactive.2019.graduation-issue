@@ -3,20 +3,8 @@ export const config = {
         {
             name: "Hedrick Hall",
             nickname: null,
-            lat: 34.0728636,
-            long: -118.4506161
-        },
-        {
-            name: "The Study",
-            nickname: null,
-            lat: 34.07287317362402,
-            long: -118.45197835938497
-        },
-        {
-            name: "Rendezvous",
-            nickname: null,
-            lat: 34.0724483,
-            long: -118.4512537
+            lat: 34.0733749921729,
+            long: -118.4523541
         },
         {
             name: "Rieber Hall",
@@ -37,22 +25,16 @@ export const config = {
             long: -118.4500173
         },
         {
-            name: "Cafe 1919",
-            nickname: null,
-            lat: 34.072663,
-            long: -118.4514172
-        },
-        {
             name: "Sunset Canyon Recreation Center",
             nickname: "Sunset Rec",
-            lat: 34.0745515,
-            long: -118.4520394
+            lat: 34.07456819733005,
+            long: -118.45239359087579
         },
         {
             name: "Sunset Village",
             nickname: null,
-            lat: 34.073572,
-            long: -118.450618
+            lat: 34.073193,
+            long: -118.450578
         },
         {
             name: "Covel Commons",
@@ -61,40 +43,34 @@ export const config = {
             long: -118.450117
         },
         {
-            name: "Bruin Cafe",
-            nickname: "BCaf",
-            lat: 34.0728299,
-            long: -118.450117
-        },
-        {
             name: "Carnesale Commons",
             nickname: null,
-            lat: 34.0723912,
-            long: -118.4501048
+            lat: 34.07159284,
+            long: -118.4501678
         },
         {
             name: "Bruin Fitness Center",
             nickname: "B-Fit",
-            lat: 34.071774,
-            long: -118.44949
+            lat: 34.07183932,
+            long: -118.4497888
         },
         {
             name: "Bruin Plate",
             nickname: "BPlate",
-            lat: 34.071978,
-            long: -118.450389
+            lat: 34.071850575707145,
+            long: -118.45018905993385
         },
         {
             name: "Dykstra Hall",
             nickname: null,
-            lat: 34.0700054,
-            long: -118.4508113
+            lat: 34.06982521,
+            long: -118.4503836
         },
         {
             name: "De Neve",
             nickname: null,
-            lat: 34.0701632,
-            long: -118.4504737
+            lat: 34.07033287,
+            long: -118.4501348
         },
         {
             name: "Pauley Pavilion",
@@ -141,8 +117,8 @@ export const config = {
         {
             name: "Student Activities Center",
             nickname: "SAC",
-            lat: 34.071822,
-            long: -118.443983
+            lat: 34.07108653,
+            long: -118.4439395
         },
         {
             name: "Royce Hall",
@@ -195,14 +171,14 @@ export const config = {
         {
             name: "Mathematical Sciences Building",
             nickname: "MS",
-            lat: 34.0689054,
-            long: -118.4421992
+            lat: 34.06936235,
+            long: -118.4424184
         },
         {
             name: "WG Young Hall",
             nickname: null,
-            lat: 34.068831,
-            long: -118.440845
+            lat: 34.06821327,
+            long: -118.4414305
         },
         {
             name: "Geology Building",
@@ -315,8 +291,8 @@ export const config = {
         {
             name: "Bruin Bear",
             nickname: null,
-            lat: 34.07051883913793,
-            long: -118.44508246630292
+            lat: 34.070886,
+            long: -118.444919
         },
         {
             name: "Drake Stadium",
