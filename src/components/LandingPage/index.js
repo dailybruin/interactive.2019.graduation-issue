@@ -1,10 +1,16 @@
 import React from "react";
 import { css } from "emotion";
+import { mobile, notMobile } from "../Shared/mediaQueries";
 
 export class LandingPage extends React.Component {
     render() {
         return (
-            <div
+            <video
+                autoPlay={true}
+                loop={true}
+                muted={true}
+                playsInline={true}
+                id="LandingPage"
                 className={css`
                     position: fixed;
                     z-index: 1001;
@@ -12,6 +18,8 @@ export class LandingPage extends React.Component {
                     height: 100vh;
                     top: 0;
                     left: 0;
+                    object-position: center;
+                    object-fit: cover;
 
                     animation-name: fade-out;
                     animation-delay: 10.2s;
@@ -40,31 +48,16 @@ export class LandingPage extends React.Component {
                         will-change: opacity;
                     }
                 `}
-                id="LandingPage"
             >
-                <video
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                    playsInline={true}
-                    className={css`
-                        height: 100%;
-                        width: 133.333333333; /* 100 * 1600 / 1200 */
-                        min-width: 100%;
-                        min-height: 75vw; /* 100 * 1200 / 1600 */
-
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                    `}
-                >
-                    <source
-                        src={require("../../assets/video.mp4")}
-                        type="video/mp4"
-                    />
-                </video>
-            </div>
+                <source
+                    src={
+                        window && window.innerWidth < 620
+                            ? require("../../assets/mobile.mp4")
+                            : require("../../assets/video.mp4")
+                    }
+                    type="video/mp4"
+                />
+            </video>
         );
     }
 }
