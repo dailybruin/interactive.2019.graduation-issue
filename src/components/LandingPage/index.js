@@ -43,10 +43,10 @@ export class LandingPage extends React.Component {
                 id="LandingPage"
             >
                 <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                    playsInline={true}
                     className={css`
                         height: 100%;
                         width: 133.333333333; /* 100 * 1600 / 1200 */
