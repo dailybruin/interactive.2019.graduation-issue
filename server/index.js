@@ -2,6 +2,7 @@ const app = require("express")();
 const cors = require("cors");
 const bodyParser = require("body-parser").json();
 const rateLimit = require("express-rate-limit");
+const { passesProfanityCheck } = require("./passesProfanityCheck");
 
 const { Memory } = require("./db");
 
@@ -29,7 +30,6 @@ const limiter = rateLimit({
 
 app.use(bodyParser);
 app.use(cors(corsOptions));
-app.use(limiter);
 
 app.get("/:location", async (req, res) => {
     const { location } = req.params;
@@ -39,9 +39,13 @@ app.get("/:location", async (req, res) => {
     res.json(memories);
 });
 
-app.post("", async (req, res) => {
+app.post("", limiter, async (req, res) => {
     console.log("Received POST request");
     const { location, text } = req.body;
+    if (!passesProfanityCheck(text)) {
+        res.json([]);
+        return;
+    }
     let memory = await Memory.create({ location, text });
     res.json(memory);
 });
