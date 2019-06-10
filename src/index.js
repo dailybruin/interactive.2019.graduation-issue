@@ -17,7 +17,7 @@ if (document != null) {
 
     ReactDOM.render(
         <Provider store={store}>
-            <App visited={false} />
+            <App visited={visited} />
         </Provider>,
         document.getElementById("root")
     );
